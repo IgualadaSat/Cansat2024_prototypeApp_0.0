@@ -1,6 +1,7 @@
 *{
 	color: #fff;
 	transition-duration: 200ms;
+	cursor: default;
 }
 
 body{
@@ -12,7 +13,7 @@ body{
 	font-family: consolas, sans-serif;
 }
 .header{
-	background: #003366;
+	background: #ffd633;
 	width: 100vw;
 	height: 45px;
 	display: block;
@@ -20,20 +21,21 @@ body{
 	top: 0;
 	left: 0;
 }
-.header:hover{
-	background: #ffd633;
-	color: #000;
-}
 .header *{
+	color: #000;
+	cursor: pointer;
 	display: flex;
 	float:left;
 	width: 128px;
-	height: calc(100% - 15px);
+	height: calc(100% - 15px - 6px);
 	padding-top: 15px;
-	padding-left: 4px;
+	padding-left: 8px;
+	border-top: 6px solid #ffd633;
 }
 .header *:hover{
+	color: #fff;
 	background: #003366;
+	border-top: 6px solid #ff3399;
 }
 
 #body{
@@ -50,10 +52,10 @@ body{
     grid-template-columns: repeat(3, 1fr);
 }
 #fase{
-	background: #005cbf;
+	background: #003366;
 }
 #log{
-	background: #005cbf;
+	background: #003366;
 }
 #bot-menu{
 	background: #003366;
@@ -77,10 +79,11 @@ body{
     grid-template-columns: repeat(3, 1fr);
 }
 button{
+	cursor: pointer;
 	border: none;
 	background: #002356;
 	height: 32px;
-	border: 2px solid #005cbf;
+	border: 2px solid #003366;
 }
 button:hover{
 	border: 2px solid #ff3399;
@@ -99,6 +102,7 @@ canvas{
 }
 
 #terminal{
+	cursor: text;
 	padding: 0;
 	border: none;
 	width: 100%;

@@ -27,8 +27,8 @@ body{
 .header *{
 	display: flex;
 	float:left;
-	height: 100%;
 	width: 128px;
+	height: calc(100% - 15px);
 	padding-top: 15px;
 	padding-left: 4px;
 }
@@ -40,7 +40,7 @@ body{
 	background: #00000000;
 	top: 45px;
 	width: 100vw;
-	height: calc(100vh - 64px);
+	height: calc(100vh - 45px);
 }
 #top-menu {
     background: #00000000;

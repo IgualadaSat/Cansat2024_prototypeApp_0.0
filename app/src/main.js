@@ -3,7 +3,7 @@ class Main{
 		console.log("listo pa romper caderas por wifi");
 	}
 	static update(){
-
+		Vista.update();
 	}
 }
 

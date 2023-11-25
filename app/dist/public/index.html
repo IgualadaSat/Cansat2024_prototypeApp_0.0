@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cansat App</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+
+<header class="header">
+	<b class="vista">config</b> <b class="vista">control</b>
+</header>
+
+<div id="body">
+	<div id="top-menu">
+		<div id="fase">
+			<iframe id="menul" src="parts/config.html" width="200" frameborder="0"></iframe>
+		</div>
+		<div id="pannel">
+			<iframe id="3d" src="parts/canvas.html" width="200" frameborder="0"></iframe>
+		</div>
+		<div id="log">
+			<iframe id="terminal" src="parts/terminal.html"></iframe>
+		</div>
+	</div>
+	<div id="bot-menu">
+		<div class="header">
+			<b>Grafico 1</b> <b>Grafico 2</b>
+		</div>
+		<div id="graph">
+			<canvas id="graphics"></canvas>
+		</div>
+	</div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="src/logic.js"></script>
+<script type="text/javascript" src="src/main.js"></script>
+
+</html>

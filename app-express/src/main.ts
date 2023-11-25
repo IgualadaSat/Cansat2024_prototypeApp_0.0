@@ -1,7 +1,7 @@
 class Main{
-	static main(){
+	static main():void{
 	}
-	static update(){
+	static update():void{
 		Vista.update();
 	}
 }

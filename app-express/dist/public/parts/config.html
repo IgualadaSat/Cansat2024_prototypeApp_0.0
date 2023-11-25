@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>config</title>
+	<link rel="stylesheet" type="text/css" href="../main.css">
+</head>
+<body>
+
+<h2 id="fases">Fases:</h2>
+<div id="buttons">
+	<button class="fase" id="fase1">Init</button>
+	<button class="fase" id="fase2">Aire</button>
+	<button class="fase" id="fase3">Tierra</button>
+</div>
+
+</body>
+
+<script type="text/javascript">
+	
+//FASES
+let fases = document.getElementsByClassName("fase");
+for(let i = 0;i < fases.length;i++)
+	fases[i].addEventListener("click",()=>{window.alert(fases[i].innerHTML)});
+
+	
+</script>
+
+</html>

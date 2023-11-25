@@ -4,7 +4,15 @@
 	cursor: default;
 }
 
+iframe{
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
 body{
+	overflow: hidden;
 	background: #000000;
 	color: #fff;
 	display: block;
@@ -101,6 +109,7 @@ canvas{
 	width: 100%;
 	height: 100%;
 }
+
 #graphics{
 	display:block;
 	background: #222222;

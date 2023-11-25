@@ -1,8 +1,3 @@
-//FASES
-let fases = document.getElementsByClassName("fase");
-for(let i = 0;i < fases.length;i++)
-	fases[i].addEventListener("click",()=>{window.alert(fases[i].innerHTML)});
-
 //VISTAS
 class Vista {
 	value = false;
@@ -24,5 +19,7 @@ for(let i = 0;i < vistas.length;i++){
 			vista[j] = new Vista();
 		vista[i].value = true;
 		Vista.id = i;
+		let frame = document.querySelector("#menul");
+		frame.src = `parts/${vistas[Vista.id].innerHTML}.html`;
 	});	
 }

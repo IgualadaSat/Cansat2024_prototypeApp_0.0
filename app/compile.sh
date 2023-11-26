@@ -1,2 +1,12 @@
-npx tsc
-node dist/app.js
+compilar() {
+    npx tsc
+}
+
+conectar() {
+    node dist/app.js
+}
+
+if [ compilar ]; then
+    compilar
+    conectar
+fi

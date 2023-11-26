@@ -3,7 +3,7 @@ compilar() {
 }
 
 conectar() {
-    node dist/app.js
+    node dist/public/src/server.js
 }
 
 if [ compilar ]; then

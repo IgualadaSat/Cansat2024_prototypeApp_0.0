@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 
 const app = express();
-const port = 3000;
+const port = 4989;
 
 const __filename = new URL(import.meta.url).pathname;
 const __dirname = path.dirname(__filename);
@@ -10,8 +10,10 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, 'dist/public/')));
 
 app.get('/connex', (req, res) => {
-  const textoDesdeElServidor = '¡Hola desde el servidor!';
-  res.json({ texto: textoDesdeElServidor });
+  const msg = req.body.texto;
+  console.log('Texto desde el cliente:', msg);
+
+  res.json({ mensaje: 'Texto recibido con éxito en el servidor' });
 });
 
 app.get('*', (req, res) => {

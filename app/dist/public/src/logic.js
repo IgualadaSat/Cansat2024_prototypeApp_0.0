@@ -1,9 +1,6 @@
-"use strict";
-// VISTAS
 class Vista {
-    constructor() {
-        this.value = false;
-    }
+    value = false;
+    static id = 0;
     static update() {
         for (let i = 0; i < vista.length; i++) {
             vistas[i].style.background = vista[i].value ? "#003366" : "#ffd633";
@@ -12,7 +9,6 @@ class Vista {
         }
     }
 }
-Vista.id = 0;
 let vista = [];
 let vistas = document.getElementsByClassName("vista");
 for (let i = 0; i < vistas.length; i++) {

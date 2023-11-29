@@ -14,7 +14,7 @@ app.post('/connex', (req, res) => {
   const msg = req.body.text;
   console.log('navegador:', msg);
 
-  res.json({ mensaje: msg }); //responde el msg primigenio
+  res.json({ text: msg });
 });
 
 app.get('*', (req, res) => {

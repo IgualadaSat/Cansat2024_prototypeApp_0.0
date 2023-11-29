@@ -8,7 +8,10 @@ class Connex{
       },
       body: JSON.stringify(Connex.msg)
     }).then(response => {
-      response.json().then(texto => {console.log("server: ",texto.mensaje)})
+      response.json().then(out => {
+        console.log("server: ",out.text); 
+        Terminal.terminal.innerHTML += "~$ "+out.text+"\n";
+      })
     }).catch(error => console.error('Error al enviar el texto:', error));
   }
 } 

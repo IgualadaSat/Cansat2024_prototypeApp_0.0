@@ -76,7 +76,7 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-button{
+button, input{
 	cursor: pointer;
 	border: none;
 	background: #00133677;
@@ -84,7 +84,7 @@ button{
 	border: 2px solid #003366;
 	border-radius: 5px;
 }
-button:hover{
+button:hover, input:hover{
 	border: 2px solid #ff3399;
 }
 
@@ -113,7 +113,7 @@ canvas{
 	padding: 0;
 	border: none;
 	width: 100%;
-	height: 100%; 
+	height: 50vh; 
 	background: #0007;
 	color: #0f0;
 }

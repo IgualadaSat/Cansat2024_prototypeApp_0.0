@@ -5,13 +5,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>config</title>
 	<link rel="stylesheet" type="text/css" href="../main.css">
+	<style type="text/css">
+		#first-c{
+		    height: 64px;
+		    width: 100vw;
+		    display: grid;
+		    grid-template-columns: repeat(3, 1fr);
+		}
+		#command-line {
+			height: 28px;
+			grid-column: span 2;
+		}
+	</style>
 </head>
 <body>
 
-<h2 id="chat">Terminal:</h2>
-<textarea id="terminal" style="height: 60vh;">primer comando</textarea>
-
-<button id="submit">submit</button>
+<h2>Terminal:</h2>
+<div id="first-c">
+	<input type="text" id="command-line"> <button id="submit">submit</button>
+</div>
+<div id="second-c">
+	<textarea id="terminal"></textarea>
+</div>
 
 </body>
 

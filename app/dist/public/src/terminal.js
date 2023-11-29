@@ -1,13 +1,10 @@
 class Terminal{
-  static content = document.querySelector("#terminal").value;
+  static content = document.querySelector("#command-line").value;
+  static terminal = document.querySelector("#terminal");
   static update(){
-    Terminal.content = document.querySelector("#terminal").value;
-    if(Connex.msg.text != Terminal.content){
-      Connex.msg = {text:Terminal.content};
-      Connex.conect();
-      console.log("sexo")
-    }
-    console.log("cancer");
+    Terminal.content = document.querySelector("#command-line").value;
+    Connex.msg = {text:Terminal.content};
+    Connex.conect();
   }
 }
 

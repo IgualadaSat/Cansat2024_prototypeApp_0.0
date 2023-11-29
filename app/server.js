@@ -8,10 +8,11 @@ const __filename = new URL(import.meta.url).pathname;
 const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, 'dist/public/')));
+app.use(express.json());
 
-app.get('/connex', (req, res) => {
+app.post('/connex', (req, res) => {
   const msg = req.body.texto;
-  console.log('Texto desde el cliente:', msg);
+  console.log('navegador:', msg);
 
   res.json({ mensaje: 'Texto recibido con éxito en el servidor' });
 });

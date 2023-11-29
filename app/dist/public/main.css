@@ -5,14 +5,15 @@
 }
 
 iframe{
-	background: #fff0;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	padding: 0;
+	margin: auto;
+	border: none;
 }
 
 body{
-	background: #0000;
 	overflow: hidden;
 	color: #fff;
 	display: block;

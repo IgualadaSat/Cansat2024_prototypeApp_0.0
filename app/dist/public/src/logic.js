@@ -14,7 +14,6 @@ let vistas = document.getElementsByClassName("vista");
 for (let i = 0; i < vistas.length; i++) {
     vista[i] = new Vista();
     vistas[i].addEventListener("mouseenter", () => {
-        console.log("Event listener registered");
         for (let j = 0; j < vistas.length; j++)
             vista[j].value = false;
         vista[i].value = true;

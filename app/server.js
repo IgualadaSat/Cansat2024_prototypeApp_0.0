@@ -11,10 +11,10 @@ app.use(express.static(path.join(__dirname, 'dist/public/')));
 app.use(express.json());
 
 app.post('/connex', (req, res) => {
-  const msg = req.body.texto;
+  const msg = req.body.text;
   console.log('navegador:', msg);
 
-  res.json({ mensaje: 'Texto recibido con éxito en el servidor' });
+  res.json({ mensaje: msg }); //responde el msg primigenio
 });
 
 app.get('*', (req, res) => {

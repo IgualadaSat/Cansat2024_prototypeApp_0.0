@@ -1,7 +1,7 @@
 class Terminal{
-  static content = document.querySelector("#terminal").innerHTML;
+  static content = document.querySelector("#terminal").value;
   static update(){
-    Terminal.content = document.querySelector("#terminal").innerHTML;
+    Terminal.content = document.querySelector("#terminal").value;
     if(Connex.msg.text != Terminal.content){
       Connex.msg = {text:Terminal.content};
       Connex.conect();

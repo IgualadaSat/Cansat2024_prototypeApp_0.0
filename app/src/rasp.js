@@ -1,20 +1,25 @@
 import { Client } from 'ssh2';
 
 export class Rasp {
-	static host = "raspberrypi";
+	static host = "igdsat";
 	static port = 22;
-	static username = "pi";
-	static password = "raspberry";
+	static username = "igdsat";
+	static password = "igdsat";
+
+	static r = "aun no me he conectado";
 
 	static connect(msg) {
-		let r = "aun no me he conectado";
+		Rasp.network(msg);
+		return {text:Rasp.r};
+	}
+	static network(msg){
 		const conn = new Client();
 		conn.on('ready', () => {
 		  conn.exec(msg, (err, stream) => {
 		    if (err) {
 		      conn.end();
 		      console.error("Error executing command:", err);
-		      r = { text: err };
+		      Rasp.r = err;
 		    }
 		    let result = 'no hay respuesta';
 		    stream.on('data', (data) => {
@@ -22,16 +27,15 @@ export class Rasp {
 		    });
 		    stream.on('end', () => {
 		      conn.end();
-		      r = { text: result };
+		      Rasp.r = result;
 		    });
 		  });
 		});
 		conn.on('error', (err) => {
 		  conn.end();
 		  console.error("Connection error:", err);
-		  r = { text: err };
+		  Rasp.r = err;
 		});
 		conn.connect(Rasp);
-		return {text: r};
 	}
 }

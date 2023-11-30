@@ -10,7 +10,9 @@ class Connex{
     }).then(response => {
       response.json().then(out => {
         console.log("server: ",out.text); 
-        Terminal.terminal.innerHTML += "~$ "+out.text+"\n";
+        Terminal.terminal.innerHTML = "~$ "+out.text+"\n"+Terminal.terminal.innerHTML;
+        if(out.text == "clear")
+          Terminal.terminal.innerHTML = "";
       })
     }).catch(error => console.error('Error al enviar el texto:', error));
   }

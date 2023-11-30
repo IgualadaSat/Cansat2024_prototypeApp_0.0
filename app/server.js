@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'path';
+import { Rasp } from "./src/rasp.js"
 
 const app = express();
 const port = 3000;
@@ -12,9 +13,7 @@ app.use(express.json());
 
 app.post('/connex', (req, res) => {
   const msg = req.body.text;
-  console.log('navegador:', msg);
-
-  res.json({ text: msg });
+  res.json(Rasp.connect(msg)); 
 });
 
 app.get('*', (req, res) => {

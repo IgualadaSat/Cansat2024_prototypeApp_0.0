@@ -6,7 +6,7 @@ export class Rasp {
 	static username = "igdsat";
 	static password = "MegaSat";
 
-	static r = "aun no me he conectado";
+	static r = "conectando...";
 
 	static connect(msg) {
 		Rasp.network(msg);

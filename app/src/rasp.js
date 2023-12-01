@@ -1,10 +1,10 @@
 import { Client } from 'ssh2';
 
 export class Rasp {
-	static host = "igdsat";
+	static host = "192.168.222.105";
 	static port = 22;
 	static username = "igdsat";
-	static password = "igdsat";
+	static password = "MegaSat";
 
 	static r = "aun no me he conectado";
 
@@ -23,7 +23,7 @@ export class Rasp {
 		    }
 		    let result = 'no hay respuesta';
 		    stream.on('data', (data) => {
-		      result += data;
+		      result = data.data;
 		    });
 		    stream.on('end', () => {
 		      conn.end();

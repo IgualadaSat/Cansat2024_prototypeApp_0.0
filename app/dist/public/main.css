@@ -1,6 +1,6 @@
 * {
     background: #0000;
-    font-family: Consolas, "Comic Sans MS", "Roboto", sans-serif;
+    font-family:  Consolas, Fira Code,"Comic Sans MS", "Roboto", inconsolata, sans-serif;
     font-size: 16px;
     color: #fff;
     transition-duration: 200ms;

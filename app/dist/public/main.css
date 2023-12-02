@@ -54,7 +54,7 @@ h1{
 
 button, input, textarea {
     background: #0007;
-    border: 2px solid #0000;
+    border: 2px solid #fff1;
     border-radius: 5px;
     cursor: pointer;
     height: 32px;

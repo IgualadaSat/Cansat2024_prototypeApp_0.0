@@ -4,7 +4,7 @@ export class Rasp {
 	static host = "192.168.222.105";
 	static port = 22;
 	static username = "igdsat";
-	static privatekey = "../ssh/id_rsa";
+	static privatekey = "../ssh/id_rsa_prueva";
 
 	static r = "hay problemas en la conexión";
 

@@ -1,8 +1,8 @@
 class Style {
 	static windows = [document.querySelectorAll('.window'),[]];
 	static update(){
-		for(let i = 0;i < windows.length;i++){
-			windows[i][i] = false;
+		for(let i = 0;i < windows[0].length;i++){
+			windows[1][i] = false;
 		}
 	}
 }

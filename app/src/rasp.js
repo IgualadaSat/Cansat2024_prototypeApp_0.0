@@ -4,9 +4,9 @@ export class Rasp {
 	static host = "192.168.222.105";
 	static port = 22;
 	static username = "igdsat";
-	static password = "MegaSat";
+	static privatekey = "../ssh/id_rsa";
 
-	static r = "conectando...";
+	static r = "hay problemas en la conexión";
 
 	static connect(msg) {
 		Rasp.network(msg);
@@ -15,15 +15,16 @@ export class Rasp {
 	static network(msg){
 		const conn = new Client();
 		conn.on('ready', () => {
+		  Rasp.r = "conectando...";
 		  conn.exec(msg, (err, stream) => {
 		    if (err) {
 		      conn.end();
-		      console.error("Error executing command:", err);
-		      Rasp.r = err;
+		      Rasp.r = err.toString();
+			  stream.end();
 		    }
 		    let result = 'no hay respuesta';
 		    stream.on('data', (data) => {
-		      result = data.data;
+		      result = data.data.toString();
 		    });
 		    stream.on('end', () => {
 		      conn.end();
@@ -33,8 +34,7 @@ export class Rasp {
 		});
 		conn.on('error', (err) => {
 		  conn.end();
-		  console.error("Connection error:", err);
-		  Rasp.r = err;
+		  Rasp.r = err.toString();
 		});
 		conn.connect(Rasp);
 	}

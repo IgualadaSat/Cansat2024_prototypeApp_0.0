@@ -3,7 +3,7 @@ import path from 'path';
 import { Rasp } from "./src/rasp.js"
 
 const app = express();
-const port = 3000;
+const port = 4953;
 
 const __filename = new URL(import.meta.url).pathname;
 const __dirname = path.dirname(__filename);
@@ -12,8 +12,10 @@ app.use(express.static(path.join(__dirname, 'dist/public/')));
 app.use(express.json());
 
 app.post('/connex', (req, res) => {
-  const msg = req.body.text;
-  res.json(Rasp.connect(msg)); 
+  let input = req.body.text;
+  let output = Rasp.connect(input);
+  console.log("rasp: ",output.text);
+  res.json(output); 
 });
 
 app.get('*', (req, res) => {

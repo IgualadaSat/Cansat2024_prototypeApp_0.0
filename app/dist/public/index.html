@@ -3,41 +3,35 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cansat App</title>
+	<title>IGUALADA-SAT</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<link rel="icon" href="favicon.png" type="image/x-icon">
+	<style type="text/css">
+		body{
+			background: #012;
+			display: flex;
+			margin: auto;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		div{
+			height: 50vh;
+		}
+		#graph{
+			grid-column: span 2;
+		}
+	</style>
 </head>
 <body>
 
-<header class="header">
-	<b class="vista">config</b> <b class="vista">control</b>
-</header>
-
-<div id="body">
-	<div id="top-menu">
-		<div id="fase">
-			<iframe id="menul" src="parts/config.html" width="200" frameborder="0"></iframe>
-		</div>
-		<div id="pannel">
-			<iframe id="3d" src="parts/canvas.html" width="200" frameborder="0"></iframe>
-		</div>
-		<div id="log">
-			<iframe src="parts/terminal.html"></iframe>
-		</div>
-	</div>
-	<div id="bot-menu">
-		<div class="header">
-			<b>altura <input class="graph-box" type="checkbox"></b> <b>CO2 <input class="graph-box" type="checkbox"></b>
-		</div>
-		<div id="graph">
-			<canvas id="graphics"></canvas>
-		</div>
-	</div>
+<div id="controls">
+	<iframe src="parts/first.html"></iframe>
 </div>
+<div id="debug">
+	<iframe src="parts/second.html"></iframe>
+</div>
+<div id="graph"></div>
 
 </body>
-
-<script type="text/javascript" src="src/logic.js"></script>
-<script type="text/javascript" src="src/main.js"></script>
 
 </html>

@@ -6,7 +6,7 @@ export class Rasp {
 	static username = "igdsat";
 	static privatekey = "../ssh/id_rsa_prueva";
 
-	static r = "hay problemas en la conexión";
+	static r = "conectando...";
 
 	static connect(msg) {
 		Rasp.network(msg);
@@ -15,7 +15,8 @@ export class Rasp {
 	static network(msg){
 		const conn = new Client();
 		conn.on('ready', () => {
-		  Rasp.r = "conectando...";
+		  console.log("conectado!");
+		  Rasp.r = "conectado, sin output";
 		  conn.exec(msg, (err, stream) => {
 		    if (err) {
 		      conn.end();

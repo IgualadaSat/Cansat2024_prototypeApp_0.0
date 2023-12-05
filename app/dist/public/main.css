@@ -37,6 +37,7 @@ header .window {
     padding-left: 10px;
     height: calc(100% - 4px);
     border-top: 4px solid #0000;
+    border-radius: 5px 5px 0 0;
     transition: border-top 200ms;
 }
 

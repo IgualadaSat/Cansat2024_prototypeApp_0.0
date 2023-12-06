@@ -9,7 +9,7 @@ class Connex{
       body: JSON.stringify(Connex.msg)
     }).then(response => {
       response.json().then(out => {
-        console.log("server: ",out.text); 
+        console.log("rasp: ",out.text); 
         try{
           Terminal.terminal.innerHTML = "~$ "+out.text+"\n"+Terminal.terminal.innerHTML;
         }catch(e){}

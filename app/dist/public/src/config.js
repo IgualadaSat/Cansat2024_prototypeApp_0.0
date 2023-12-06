@@ -2,7 +2,7 @@ class Config{
   static button = document.getElementsByClassName("fase");
   static id = 0;
   static update(){
-    Connex.msg = {text:Config.button[Config.id].innerText};
+    Connex.msg = {text:"Config.button[Config.id].innerText"};
     Connex.conect();
   }
 }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animación Cubo 3D con Degradado</title>
+  <title>Animación Cubo 3D</title>
   <style>
     body { margin: 0; }
     canvas { display: block; }
@@ -28,11 +28,8 @@
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // Calcular el color de fondo basado en la rotación del cubo
-      const backgroundColor = new THREE.Color().setHSL((cube.rotation.x + cube.rotation.y) / (2 * Math.PI), 1, 0.5);
-      renderer.setClearColor(backgroundColor);
-
       // Limpiar el canvas en blanco
+      renderer.setClearColor(0x22313F);
       renderer.clear();
 
       // Rotación del cubo

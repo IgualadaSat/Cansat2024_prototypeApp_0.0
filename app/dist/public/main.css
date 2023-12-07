@@ -57,12 +57,12 @@ h1{
 	font-weight: bold;
 	width: calc(100% - 0);
 	font-size: 24px;
-	background: #057;
+	background: #07d;
 }
 
 button, input, textarea {
     padding-left: 10px;
-    background: #0007;
+    background: #0127;
     border: 2px solid #fff1;
     border-radius: 5px;
     cursor: pointer;

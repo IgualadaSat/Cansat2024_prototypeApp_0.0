@@ -9,7 +9,7 @@
 }
 
 body, div, header, iframe, canvas{
-	  padding: 0;
+    padding: 0;
     overflow: hidden;
     height: 100vh;
 }
@@ -20,7 +20,7 @@ canvas{
 }
 
 #body{
-	  background: #fff2;
+    background: linear-gradient(to top, #0000, #fff2, #fff2);
     height: calc(100% - 32px);
 }
 

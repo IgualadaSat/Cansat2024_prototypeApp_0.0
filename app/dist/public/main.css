@@ -54,15 +54,15 @@ header .window:hover {
 
 h1{
     padding-left: 10px;
-	font-weight: bold;
-	width: calc(100% - 0);
-	font-size: 24px;
-	background: #07d;
+    font-weight: bold;
+    width: calc(100% - 0);
+    font-size: 24px;
+    background: #057;
 }
 
 button, input, textarea {
     padding-left: 10px;
-    background: #0127;
+    background: #0007;
     border: 2px solid #fff1;
     border-radius: 5px;
     cursor: pointer;

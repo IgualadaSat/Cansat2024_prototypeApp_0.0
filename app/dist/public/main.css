@@ -5,17 +5,22 @@
     color: #fff;
     transition-duration: 200ms;
     cursor: default;
-    padding-left: 10px;
+    padding: 0;
 }
 
-body, div, header, iframe{
-	padding: 0;
+body, div, header, iframe, canvas{
+	  padding: 0;
     overflow: hidden;
     height: 100vh;
 }
 
+canvas{
+  background: #0005;
+  width: 100vw;
+}
+
 #body{
-	background: #fff2;
+	  background: #fff2;
     height: calc(100% - 32px);
 }
 
@@ -33,6 +38,7 @@ header {
 }
 
 header .window {
+    padding-left: 10px;
     display: block;
     padding-left: 10px;
     height: calc(100% - 4px);
@@ -47,6 +53,7 @@ header .window:hover {
 }
 
 h1{
+    padding-left: 10px;
 	font-weight: bold;
 	width: calc(100% - 20px);
 	font-size: 24px;
@@ -54,6 +61,7 @@ h1{
 }
 
 button, input, textarea {
+    padding-left: 10px;
     background: #0007;
     border: 2px solid #fff1;
     border-radius: 5px;
@@ -62,13 +70,16 @@ button, input, textarea {
 }
 
 button:hover , input:hover {
-    border: 2px solid #ff0;
+    border: 2px solid #0ffa;
 }
 
 input , textarea{
+    padding-left: 10px;
     cursor: text;
     background: #0005;
+    color: #0ff;
 }
 textarea{
+    padding-left: 10px;
     cursor: default;
 }

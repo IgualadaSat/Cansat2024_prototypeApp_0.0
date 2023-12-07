@@ -55,7 +55,7 @@ header .window:hover {
 h1{
     padding-left: 10px;
 	font-weight: bold;
-	width: calc(100% - 20px);
+	width: calc(100% - 0);
 	font-size: 24px;
 	background: #057;
 }

@@ -20,7 +20,7 @@ canvas{
 }
 
 #body{
-    background: linear-gradient(to top, #0000, #fff2, #fff2);
+    background: linear-gradient(to top, #0000, #0005, #0005);
     height: calc(100% - 32px);
 }
 
@@ -57,13 +57,13 @@ h1{
     font-weight: bold;
     width: calc(100% - 0);
     font-size: 24px;
-    background: #057;
+    background: linear-gradient(to right, #07a, #0ffa, #0ffa);
 }
 
 button, input, textarea {
     padding-left: 10px;
-    background: #0007;
-    border: 2px solid #fff1;
+    background: #0003;
+    border: 2px solid #0000;
     border-radius: 5px;
     cursor: pointer;
     height: 32px;
@@ -76,7 +76,7 @@ button:hover , input:hover {
 input , textarea{
     padding-left: 10px;
     cursor: text;
-    background: #0005;
+    background: #0002;
     color: #0ff;
 }
 textarea{

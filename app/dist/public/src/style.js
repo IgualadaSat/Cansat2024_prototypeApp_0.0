@@ -23,7 +23,7 @@ class Header {
 			Header.windows[i].style.background = "#fff0";
 		}
 		Header.windows[Header.windowid].style.borderTop = "4px solid #0ffa";
-		Header.windows[Header.windowid].style.background = "#0005";
+		Header.windows[Header.windowid].style.background = "#fff2";
 	}
 }
 

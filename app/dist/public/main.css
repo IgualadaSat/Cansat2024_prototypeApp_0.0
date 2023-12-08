@@ -20,7 +20,7 @@ canvas{
 }
 
 #body{
-    background: linear-gradient(to top, #0000, #0005, #0005);
+    background: linear-gradient(to top, #fff0, #fff2, #fff2);
     height: calc(100% - 32px);
 }
 
@@ -63,7 +63,7 @@ h1{
 button, input, textarea {
     padding-left: 10px;
     background: #0003;
-    border: 2px solid #0000;
+    border: 2px solid #fff1;
     border-radius: 5px;
     cursor: pointer;
     height: 32px;

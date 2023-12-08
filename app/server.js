@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
-import { Rasp } from "./src/rasp.js"
+import { Rasp } from "./src/rasp.js";
+import { Database } from "./src/db.js";
 
 const app = express();
 const port = 4953;

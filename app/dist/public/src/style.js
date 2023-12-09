@@ -33,7 +33,7 @@ function applyMode(element, modeClass) {
     element.classList.add(modeClass);
 }
 
-DARKMODE();
+LIGHTMODE();
 
 class Header {
 	static windows = document.querySelectorAll('.window');
@@ -63,7 +63,7 @@ class Header {
 				Header.windows[i].style.background = "#fff0";
 			}
 			Header.windows[Header.windowid].style.borderTop = "4px solid #0ffa";
-			Header.windows[Header.windowid].style.background = window.dm?"#fff2":"#fff2";
+			Header.windows[Header.windowid].style.background = window.dm?"#fff2":"#0005";
 		}
 	}
 }

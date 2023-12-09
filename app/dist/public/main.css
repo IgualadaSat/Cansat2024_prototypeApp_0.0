@@ -24,8 +24,8 @@ canvas{
     height: calc(100% - 32px);
 }
 #body.lightmode {
-    background: linear-gradient(to top, #fff0, #fff2, #fff2);
-    /*background: linear-gradient(to top, #0000, #0005, #0005);*/
+    /*background: linear-gradient(to top, #fff0, #fff2, #fff2);*/
+    background: linear-gradient(to top, #0000, #0005, #0005);
     height: calc(100% - 32px);
 }
 

@@ -1,13 +1,13 @@
-window.dm = true;
+document.lm = true;
 
 const LIGHTMODE = () => {
 	applyModeToFrames(document, "lightmode");
-	window.dm = false;
+	document.lm = false;
 };
 
 const DARKMODE = () => {
 	applyModeToFrames(document, "darkmode");
-	window.dm = true;
+	document.lm = true;
 };
 
 function applyModeToFrames(doc, modeClass) {
@@ -21,6 +21,10 @@ function applyModeToFrames(doc, modeClass) {
     iframes.forEach(iframe => {
         try {
             const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+            if(modeClass == "lightmode")
+            	iframeDocument.lm = true;
+           	else
+           		iframeDocument.lm = false;
             applyModeToFrames(iframeDocument, modeClass);
         } catch (error) {
             console.error("Error al acceder al contenido del iframe:", error);
@@ -63,7 +67,7 @@ class Header {
 				Header.windows[i].style.background = "#fff0";
 			}
 			Header.windows[Header.windowid].style.borderTop = "4px solid #0ffa";
-			Header.windows[Header.windowid].style.background = window.dm?"#fff2":"#0005";
+			Header.windows[Header.windowid].style.background = document.lm?"#0005":"#fff2";
 		}
 	}
 }

@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
 import { Rasp } from "./src/rasp.js";
-import { Database } from "./src/db.js";
+import { Terminal } from "./src/terminal.js";
 
 const app = express();
 const port = 4953;
@@ -12,9 +12,14 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, 'dist/public/')));
 app.use(express.json());
 
+app.post("/terminal", (req, res) => {
+  res.json(Terminal.msgs[Terminal.msgs.length-1]);
+});
+
 app.post('/connex', (req, res) => {
   let input = req.body.text;
   let output = Rasp.connect(input);
+  Terminal.msgs[Terminal.msgs.length] = output;
   console.log("rasp: ",output.text);
   res.json(output); 
 });

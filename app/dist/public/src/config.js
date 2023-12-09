@@ -4,6 +4,8 @@ class Config{
   static update(){
     Connex.msg = {text:"Config.button[Config.id].innerText"};
     Connex.conect();
+
+    Terminal.recive();
   }
 }
 

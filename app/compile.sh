@@ -16,6 +16,5 @@ abrir() {
 }
 
 if [ compilar ]; then
-    creardb
     conectar
 fi

@@ -9,10 +9,7 @@ class Connex{
       body: JSON.stringify(Connex.msg)
     }).then(response => {
       response.json().then(out => {
-        console.log("rasp: ",out.text); 
-        try{
-          Terminal.terminal.innerHTML = "~$ "+out.text+"\n"+Terminal.terminal.innerHTML;
-        }catch(e){}
+        console.log("rasp: ",out.text);
       })
     }).catch(error => console.error('Error al enviar el texto:', error));
   }

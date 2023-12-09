@@ -31,8 +31,7 @@
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // Limpiar el canvas en blanco
-      window.dm?renderer.setClearColor(0x001122):renderer.setClearColor(0xffffff);
+      renderer.setClearColor(0x555555);
       renderer.clear();
 
       // Rotación del cubo

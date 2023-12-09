@@ -3,7 +3,6 @@ window.dm = true;
 const LIGHTMODE = () => {
 	applyModeToFrames(document, "lightmode");
 	window.dm = false;
-
 };
 
 const DARKMODE = () => {
@@ -64,7 +63,7 @@ class Header {
 				Header.windows[i].style.background = "#fff0";
 			}
 			Header.windows[Header.windowid].style.borderTop = "4px solid #0ffa";
-			Header.windows[Header.windowid].style.background = window.dm?"#fff2":"#0005";
+			Header.windows[Header.windowid].style.background = window.dm?"#fff2":"#fff2";
 		}
 	}
 }

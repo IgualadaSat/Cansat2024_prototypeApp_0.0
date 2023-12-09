@@ -24,7 +24,8 @@ canvas{
     height: calc(100% - 32px);
 }
 #body.lightmode {
-    background: linear-gradient(to top, #0000, #0005, #0005);
+    background: linear-gradient(to top, #fff0, #fff2, #fff2);
+    /*background: linear-gradient(to top, #0000, #0005, #0005);*/
     height: calc(100% - 32px);
 }
 
@@ -59,9 +60,26 @@ header .window:hover {
 h1{
     padding-left: 10px;
     font-weight: bold;
+    color: #fff;
     width: calc(100% - 0);
     font-size: 24px;
     background: linear-gradient(to right, #07a, #0ffa, #0ffa);
+}
+h2{
+    padding-left: 10px;
+    font-weight: bold;
+    color: #fff;
+    width: calc(100% - 0);
+    font-size: 24px;
+    background: linear-gradient(to bottom right, #f21, #f52, #f75);
+}
+h3{
+    padding-left: 10px;
+    font-weight: bold;
+    color: #000;
+    width: calc(100% - 0);
+    font-size: 24px;
+    background: linear-gradient(to bottom right, #1f2, #2f5, #5f7);
 }
 
 button, input, textarea {
@@ -86,4 +104,15 @@ input , textarea{
 textarea{
     padding-left: 10px;
     cursor: default;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background: #0ff; 
+}
+
+input[type="checkbox"]:checked {
+    background: #fff;
 }

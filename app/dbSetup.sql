@@ -6,8 +6,3 @@ CREATE TABLE IF NOT EXISTS interactions (
   input VARCHAR(255) NOT NULL,
   output VARCHAR(255) NOT NULL
 );
-
-DROP USER 'root'@'localhost';
-CREATE USER 'root'@'localhost' IDENTIFIED BY '';
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
-FLUSH PRIVILEGES;

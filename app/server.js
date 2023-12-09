@@ -13,13 +13,15 @@ app.use(express.static(path.join(__dirname, 'dist/public/')));
 app.use(express.json());
 
 app.post("/terminal", (req, res) => {
-  res.json(Terminal.msgs[Terminal.msgs.length-1]);
+  res.json(Terminal.msgs);
 });
 
 app.post('/connex', (req, res) => {
   let input = req.body.text;
   let output = Rasp.connect(input);
-  Terminal.msgs[Terminal.msgs.length] = output;
+  Terminal.msgs[Terminal.msgs.length] = output.text;
+  if(input == "clear")
+    Terminal.msgs = [];
   console.log("rasp: ",output.text);
   res.json(output); 
 });

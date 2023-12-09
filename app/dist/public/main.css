@@ -19,8 +19,12 @@ canvas{
   width: 100vw;
 }
 
-#body{
+#body.darkmode {
     background: linear-gradient(to top, #fff0, #fff2, #fff2);
+    height: calc(100% - 32px);
+}
+#body.lightmode {
+    background: linear-gradient(to top, #0000, #0005, #0005);
     height: calc(100% - 32px);
 }
 

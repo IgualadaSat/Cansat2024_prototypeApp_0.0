@@ -7,8 +7,21 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="icon" href="favicon.png" type="image/x-icon">
 	<style type="text/css">
-		body{
+		body.darkmode{
 			background: linear-gradient(to bottom right, #012, #025, #057); 
+			/*linear-gradient(to bottom right, #21f, #52f, #75f);*/
+			/*linear-gradient(to bottom right, #f20, #f50, #f70);*/
+			/*linear-gradient(to bottom right, #f12, #f25, #f57);*/
+			/*linear-gradient(to bottom right, #012, #025, #057);/*
+			/*linear-gradient(to bottom right, #210, #520, #fa0);*/
+			display: flex;
+			margin: auto;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		body.lightmode{
+			background: linear-gradient(to bottom right, #21f, #52f, #75f); 
 			/*linear-gradient(to bottom right, #21f, #52f, #75f);*/
 			/*linear-gradient(to bottom right, #f20, #f50, #f70);*/
 			/*linear-gradient(to bottom right, #f12, #f25, #f57);*/
@@ -41,5 +54,7 @@
 </div>
 
 </body>
+
+<script type="text/javascript" src="src/style.js"></script>
 
 </html>

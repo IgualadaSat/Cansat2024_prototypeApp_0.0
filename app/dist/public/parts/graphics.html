@@ -12,6 +12,7 @@
 </head>
 <body>
   <!--<input type="color" name="">-->
+  <script src="../src/style.js"></script>
   <script src="https://threejs.org/build/three.js"></script>
   <script>
     const scene = new THREE.Scene();
@@ -31,7 +32,7 @@
       requestAnimationFrame(animate);
 
       // Limpiar el canvas en blanco
-      renderer.setClearColor(0x001122);
+      window.dm?renderer.setClearColor(0x001122):renderer.setClearColor(0xffffff);
       renderer.clear();
 
       // Rotación del cubo

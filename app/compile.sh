@@ -2,8 +2,7 @@ conectar() {
     node server.js
 }
 creardb() {
-    sudo service mysql restart
-    mysql -u root -p < dbSetup.sql
+    sudo mysql -u root -p < dbSetup.sql
 }
 abrir() {
     url="http://localhost:4953"

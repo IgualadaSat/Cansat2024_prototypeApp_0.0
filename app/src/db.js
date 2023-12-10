@@ -12,14 +12,27 @@ export class Database {
 		  const sql = fs.readFileSync('./database/src/init.sql', 'utf8');
 
 	      await Database.db.exec(sql);
-
-		  console.log('Base de datos creada exitosamente.');
 		} catch (error) {
 		  console.error('Error al crear la base de datos:', error);
-		} finally {
-		  if (Database.db) {
-		    Database.db.close();
-		  }
+		}
+	}
+	
+	static async logTables() {
+		try {
+		  const sql = fs.readFileSync('./database/src/getTables.sql', 'utf8');
+		  
+		  Database.db.all(sql, [], (err, rows) => {
+		    if (err) {
+		      throw err;
+		    }
+
+		    console.log('Tables in the database:');
+		    rows.forEach((row) => {
+		      console.log(row.name);
+		    });
+		  });
+		} catch (error) {
+		  console.error('Error logging tables:', error);
 		}
 	}
 }

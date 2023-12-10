@@ -2,12 +2,12 @@ document.lm = true;
 
 const LIGHTMODE = () => {
 	applyModeToFrames(document, "lightmode");
-	document.lm = false;
+	document.lm = true;
 };
 
 const DARKMODE = () => {
 	applyModeToFrames(document, "darkmode");
-	document.lm = true;
+	document.lm = false;
 };
 
 function applyModeToFrames(doc, modeClass) {

@@ -1,19 +1,17 @@
 import sqlite from 'sqlite3';
+import fs from "fs";
 
 export class Database {
-	static src = './dades/dades.db';
+	static src = './database/dades.db';
 	static db = null;
 
 	static async init() {
 		try {
 		  Database.db = new sqlite.Database(Database.src);
 
-		  await Database.db.exec(`
-		    CREATE TABLE IF NOT EXISTS dades (
-		      id INTEGER PRIMARY KEY AUTOINCREMENT,
-		      temperatura INT
-		    );
-		  `);
+		  const sql = fs.readFileSync('./database/src/init.sql', 'utf8');
+
+	      await Database.db.exec(sql);
 
 		  console.log('Base de datos creada exitosamente.');
 		} catch (error) {

@@ -1,4 +1,4 @@
-document.lm = true;
+document.lm = false;
 
 const LIGHTMODE = () => {
 	applyModeToFrames(document, "lightmode");
@@ -37,7 +37,7 @@ function applyMode(element, modeClass) {
     element.classList.add(modeClass);
 }
 
-LIGHTMODE();
+document.lm?LIGHTMODE():DARKMODE();
 
 class Header {
 	static windows = document.querySelectorAll('.window');

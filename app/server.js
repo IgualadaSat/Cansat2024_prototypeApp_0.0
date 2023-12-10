@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import { Rasp } from "./src/rasp.js";
 import { Terminal } from "./src/terminal.js";
+import { Database } from "./src/db.js";
 
 const app = express();
 const port = 4953;
@@ -11,6 +12,8 @@ const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, 'dist/public/')));
 app.use(express.json());
+
+Database.init();
 
 app.post("/terminal", (req, res) => {
   res.json(Terminal.msgs);

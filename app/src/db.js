@@ -1,41 +1,27 @@
-import mysql from "mysql";
+import sqlite from 'sqlite3';
 
 export class Database {
-	static host = "localhost";
-	static user = "root";
-	static password = "";
-	static database = "terminal";
+	static src = './dades/dades.db';
+	static db = null;
 
-	static connex = 0;
+	static async init() {
+		try {
+		  Database.db = new sqlite.Database(Database.src);
 
-	static connect(){
-		Database.connex = mysql.createConnection(Database);
+		  await Database.db.exec(`
+		    CREATE TABLE IF NOT EXISTS dades (
+		      id INTEGER PRIMARY KEY AUTOINCREMENT,
+		      temperatura INT
+		    );
+		  `);
 
-		Database.connex.connect((err) => {
-	      if (err) {
-	        console.error('Error connecting to database:', err);
-	        throw err;
-	      }
-	      console.log('Connected to database');
-	    });
+		  console.log('Base de datos creada exitosamente.');
+		} catch (error) {
+		  console.error('Error al crear la base de datos:', error);
+		} finally {
+		  if (Database.db) {
+		    Database.db.close();
+		  }
+		}
 	}
-	static disconnect() {
-	    Database.connex.end((err) => {
-	      if (err) {
-	        console.error('Error disconnecting from database:', err);
-	        throw err;
-	      }
-	      console.log('Disconnected from database');
-	    });
- 	}
-
- 	static query(sql, values, callback) {
-	    Database.connex.query(sql, values, (err, results, fields) => {
-	      if (err) {
-	        console.error('Database query error:', err);
-	        throw err;
-	      }
-	      callback(results, fields);
-	    });
-  	}
 }

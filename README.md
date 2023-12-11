@@ -2,6 +2,10 @@
 
 The first app prototype for igualadasats cansat in 2024.
 
+## How to use
+
+On Bash: `chmod +x compile.sh` and `./compile.sh` or `node server.js`. On Bach: `node server.js` or make a .bat yourserf, silly windows user :)
+
 ![interface img](hdu.png "Darkmode")
 
 ![interface img](hdul.png "Lightmode")

@@ -1,4 +1,4 @@
-#App prototype Cansat 2024
+# App prototype Cansat 2024
 
 The first app prototype for igualadasats cansat in 2024
 
